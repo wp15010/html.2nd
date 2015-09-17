@@ -5,30 +5,41 @@
 <title>森の工房 [Forest Studio] - 森の工房について</title>
 
 <link href='https://fonts.googleapis.com/css?
-family=Playball' rel='stylesheet' type='text/css'>
+family=playball' rel='stylesheet' type='text/css'>
 
 <style>
 
 
 body {font-family: 'メイリオ',
-	'Hiragion Kaku Gothic Pro',sans-serif}
+	'Hiragion Kaku Gothic Pro',sans-serif;
+	background-color: #e5e5e5;
+	margin: 0}
 
 a	{color: #017acd}
 
 /* コンテナ */
 div#container	{width: 900px;
 	margin-left: auto;
-	margin-right: auto}
+	margin-right: auto;
+	background-color: #ffffff;
+	padding: 0 40px;
+	-webkit-box-shadow: 0px 0px 50px #bbbbbb;
+	box-shadow: 0px 0px 50px #bbbbbb;
+	background-image: url(circle.png),url(circle-yellow.png);
+	background-repeat: no-repeat;
+	background-position: 15px  420px, 90px 500px;
+	background-size: 94px 94px, 30px 30px}
 
 /* ヘッダー */
-header#pageheader	{background: none;
-	padding: 15px 0 0}
+header#pageheader img
+{-webkit-box-shadow: 10px 10px 10px #666666;
+box-shadow: 10px 10px 10px #666666;}
 
 header#pageheader h1 	{margin: 0;
 	float: left;
 	font-size: 40px;
 	font-weight: normal;
-	font-family: 'Playball', cursive;
+	font-family: 'playball', cursive;
 }
 
 header#pageheader p	{color: #666666;
@@ -47,8 +58,12 @@ nav ul	{font-size: 0.75em;
 	margin-left: 0;
 	padding-left: 0;
 	height: 30px;
-	background-color: #333333;
-	border-radius: 5px;}
+	background-color: grey;
+	border-radius: 5px;
+	background:-webkit-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%);
+	background: -moz-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%);
+	background: -o-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%);
+	background: -ms-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%)}
 
 nav ul li	{list-style-type: none;
 	float: left}
@@ -74,7 +89,8 @@ article	{width: auto;
 	article header {border: solid 1px #aaaaaa;
 		margin: 20px 0 10px;
 		padding: 18px;
-		border-radius: 30px;}
+		border-radius: 30px;
+		box-shadow: 0px 2px 3px #cccccc;}
 
 article header h1	{background: none;
 	font-size: 28px;
@@ -94,11 +110,13 @@ article header p {font-size: 16px;
 	padding: 18px;
 	border-radius: 30px;
 	overflow: hidden;
-	background: -webkit-gradient(linear,left,top,left bottom,from(#ffffff),to(#dfdfdf));
-	background: -webkit-linear-gradient(#ffff00 0%,#ff6600 100%);
-	background: -moz-linear-gradient(#ffff00 0%,#ff6600 100%);
-	background: -o-linear-gradient(#ffff00 0%,#ff6600 100%);
-	background: -ms-linear-gradient(#ffff00 0%,#ff6600 100%)}
+	background: -webkit-linear-gradient(#ffffff 0%,#dfdfdf 100%);
+	background: -webkit-linear-gradient(#ffffff 0%,#dfdfdf 100%);
+	background: -moz-linear-gradient(#ffffff 0%,#dfdfdf 100%);
+	background: -o-linear-gradient(#ffffff 0%,#dfdfdf 100%);
+	background: -ms-linear-gradient(#ffffff 0%,#dfdfdf 100%);
+	box-shadow: 0px 2px 3px #cccccc,0px 0px 4px 3px #ffffff inset
+	}
 
 
 article section h1	{background: none;
