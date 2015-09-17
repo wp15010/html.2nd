@@ -7,7 +7,31 @@
 
 <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
+
 <style>
+/* ３段組み */
+article div[itemprop="articleBody"]
+	{display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box}
+
+article section {width: 288px;
+	margin-right: 18px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: visible;}
+
+article section h1 {height: 48px;
+					line-height: 1.2}
+
+article section:nth-of-type(1) figure
+			{float: none;
+				margin: 0;}
+
+article section:nth-of-type(1n) figcaption
+			{text-align: center;
+			margin-bottom: 15px}
 
 
 body {font-family: 'メイリオ',
@@ -28,7 +52,9 @@ div#container	{width: 900px;
 	background-image: url(circle.png),url(circle-yellow.png);
 	background-repeat: no-repeat;
 	background-position: 15px  420px, 90px 500px;
-	background-size: 94px 94px, 30px 30px}
+	background-size: 94px 94px, 30px 30px;
+	position: relative;
+	overflow: hidden}
 
 /* ヘッダー */
 header#pageheader img
@@ -57,12 +83,12 @@ nav ul	{font-size: 0.75em;
 	margin-left: 0;
 	padding-left: 0;
 	height: 30px;
-	background-color: grey;
+	background-color: #000000;
 	border-radius: 5px;
 	background:-webkit-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%);
-	background: -moz-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%);
-	background: -o-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%);
-	background: -ms-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%)}
+	background:-moz-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%);
+	background:-o-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%);
+	background:-ms-linear-gradient(#7777777 0%,#444444 50%,#333333 51%,#555555 100%)}
 
 nav ul li	{list-style-type: none;
 	float: left}
@@ -73,12 +99,13 @@ nav ul li a	{display: block;
 	text-decoration: none;
 	text-align: center;
 	color: #ffffff;
-	border-right: solid 1px #ffffff}
+	border-right: solid 1px rgba(255,255,255,0.2)}
 
-nav ul li a:hover	{background-color: #017acd}
+nav ul li a:hover	{background-color: rgba(1,122,205,0.3)}
 
 nav ul li:first-of-type a:hover{
-	border-radius: 5px 0 0 5px;}
+	border-radius: 5px 0 0 5px;
+	}
 
 /* コンテンツ */
 article	{width: auto;
@@ -89,7 +116,12 @@ article	{width: auto;
 		margin: 20px 0 10px;
 		padding: 18px;
 		border-radius: 30px;
-		box-shadow: 0px 2px 3px #cccccc;}
+		-webkit-box-shadow: 0px 2px 3px #cccccc,
+		0px 0px 4px 3px #ffffff inset;
+		box-shadow: 0px 2px 3px #cccccc,
+		0px 0px 4px 3px #ffffff inset;
+		background-color: rgba(255,255,255,0.5)
+		}
 
 article header h1	{background: none;
 	font-size: 28px;
@@ -135,18 +167,35 @@ article p	{font-size: 0.75em;
 	margin-right: 0}
 
 /* フッター */
-footer	{color: #ffffff;
-	background-color: #005087;
+footer	{color: #888888;
 	margin-top: 25px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	clear: both;}
+	clear: both;
+	border-top: solid 1px #aaaaaa}
 
 small {font-size: 0.75em;
 	font-style: normal;
-	text-align: center;
+	text-align: left;
 	display: block;
 	}
+
+	small::before {content: 'GREEN LEFT';
+	display: block;
+	width: 200px;
+	padding: 10px 0;
+	background-color: #000000;
+	color: #ffffff;
+	font-family: 'Lobster', cursive;
+	font-size: 16px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	-webkit-transform: rotate(-45deg)translate(62px,20px);
+	-moz-transform: rotate(-45deg)translate(62px,20px);
+	-o-transform: rotate(-45deg)translate(62px,20px);
+	-ms-transform: rotate(-45deg)translate(62px,20px)}
 
 
 /* 画像の配置 */
