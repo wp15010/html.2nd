@@ -47,7 +47,7 @@ article section + section + section
 	{margin-right: 0}
 
 }
-
+</style><style>
 /* ===== タブレット用の設定 ===== */
 @media only screen and (min-width: 600px)
 and (max-width:899px){
@@ -69,7 +69,7 @@ nav ul {font-size: 10px}
 nav ul li a {width: 100px}
 
 }
-
+</style><style>
 /*===== スマートフォン用の設定 =====*/
 @media only screen and (max-width:599px){
 
@@ -119,7 +119,7 @@ body {font-family: 'メイリオ',
 	margin: 0}
 
 a	{color: #017acd}
-
+</style><style>
 /* コンテナ */
 div#container	{width: 900px;
 	margin-left: auto;
@@ -294,6 +294,33 @@ article section:nth-of-type(even) figure	{float: left;
 		text-align: right}
 
 </style>
+<!--[if ly IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<style>
+		article section figure{float: right;
+								margin-left: 15px;
+								margin-bottom: 15px;}
+		nav ul li a {border-right: 1px solid #ffffff}
+		nav ul li a:hover {background-color: #017acb}
+</style>
+<![endif]-->
+<!--[if lt IE 10]>
+<style>
+	article section
+		{filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff',endColorstr='#dfdfdf');
+
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff',endColorstr='#dfdfdf')"}
+	nav ul
+		{filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#777777',endColorstr='#333333');
+
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#777777',endColorstr='#333333')"}
+</style>
+<!--[if lt IE 8]>
+<style>
+	article section {width: 250px}
+	article section  figure {margin-left: 0}
+</style>
+<![endif]-->
 <script>
 function myimage(){
 	var canvas = document.getElementById('circle');
